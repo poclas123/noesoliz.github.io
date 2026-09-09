@@ -1,0 +1,261 @@
+:root {
+  --amarillo: #ffe32b;
+  --azul: #2f4f98;
+  --azul-oscuro: #13254d;
+  --azul-claro: #8da6c8;
+  --gris: #dbe3f0;
+  --blanco: #ffffff;
+  --texto: #172b55;
+  --sombra: rgba(19, 37, 77, 0.18);
+  --fondo: #f4f7fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #fffef0 0%, #e7eef8 100%);
+  color: var(--texto);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0.5rem 0 1rem 1.5rem;
+  line-height: 1.8;
+}
+
+.cabecera {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+  padding: 1rem 2rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+}
+
+.menu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.menu a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.principal {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.etiqueta {
+  color: var(--azul);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+.hero h1,
+.pagina h1 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  margin: 0.2rem 0 1rem;
+  color: var(--azul-oscuro);
+}
+
+.hero p,
+.pagina p,
+.pagina li {
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.intro {
+  max-width: 560px;
+}
+
+.botones {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.boton {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--azul), #486bb3);
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 0.9rem 1.4rem;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(47, 79, 152, 0.25);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.icono {
+  display: inline-block;
+  margin-right: 0.45rem;
+  font-size: 1.1em;
+  line-height: 0;
+  vertical-align: -0.08em;
+}
+
+.boton:hover,
+.boton:focus-visible {
+  background: var(--amarillo);
+  color: var(--azul-oscuro);
+  transform: translateY(-2px);
+}
+
+.boton-secundario {
+  background: transparent;
+  color: var(--azul);
+  border: 2px solid var(--azul);
+  box-shadow: none;
+}
+
+.boton-secundario:hover,
+.boton-secundario:focus-visible {
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+}si
+
+.hero-imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-imagen img,
+.image-card img,
+.hobby-item img {
+  width: 100%;
+  object-fit: auto;
+  border-radius: 22px;
+}
+
+.hero-imagen img {
+  max-width: 430px;
+  height: 430px;
+}
+
+.pagina {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.content-grid.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.image-card {
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.image-card img {
+  height: 320px;
+}
+
+.image-card.large img {
+  height: 420px;
+}
+
+.bloque-texto {
+  margin-top: 2rem;
+}
+
+.bloque-texto h2 {
+  color: var(--azul-oscuro);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+blockquote {
+  margin: 2rem 0 0;
+  padding: 1.2rem 1.4rem;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-left: 5px solid var(--azul);
+  border-radius: 12px;
+  color: var(--azul-oscuro);
+  line-height: 1.8;
+}
+
+.lista-hobbies {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.hobby-item {
+  background: var(--blanco);
+  border: 1px solid var(--gris);
+  border-radius: 18px;
+  padding: 1.3rem;
+  box-shadow: 0 10px 20px rgba(148, 163, 184, 0.08);
+}
+
+.hobby-item h2 {
+  margin-top: 0;
+  color: var(--azul-oscuro);
+}
+
+.hobby-item img {
+  height: 220px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 760px) {
+  .hero,
+  .content-grid,
+  .content-grid.reverse,
+  .lista-hobbies {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 1rem;
+  }
+
+  .pagina {
+    padding: 1.2rem;
+  }
+
+  .hero-imagen img {
+    height: 300px;
+  }
+}
